@@ -10,6 +10,8 @@ Pasos para levantar la app en desarrollo
 
 3.- Remplazar las variables de entorno
 
+4.- Seed para crear [la base de datos local](localhost:3000/api/seed)
+
 - Prisma commads
 
 `npx prisma init`
