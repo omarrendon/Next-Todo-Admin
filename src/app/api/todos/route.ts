@@ -8,18 +8,14 @@ export async function GET(request: Request) {
 
   if (isNaN(+take)) {
     return NextResponse.json(
-      {
-        message: "Take is not a number",
-      },
+      { message: "Take is not a number" },
       { status: 400 }
     );
   }
 
   if (isNaN(+skip)) {
     return NextResponse.json(
-      {
-        message: "Skip is not a number",
-      },
+      { message: "Skip is not a number" },
       { status: 400 }
     );
   }
