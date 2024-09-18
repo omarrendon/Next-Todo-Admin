@@ -30,3 +30,14 @@ export const crateTodo = async (description: string): Promise<Todo> => {
 
   return todoDB;
 };
+
+export const deleteTodo = async (): Promise<boolean> => {
+  await fetch(`/api/todos`, {
+    method: "DELETE",
+    headers: {
+      "Content-type": "application-json",
+    },
+  }).then(resp => resp.json());
+
+  return true;
+};
