@@ -16,3 +16,17 @@ export const updateTodo = async (
 
   return todoDB;
 };
+
+export const crateTodo = async (description: string): Promise<Todo> => {
+  const body = { description };
+
+  const todoDB = await fetch(`/api/todos`, {
+    method: "POST",
+    body: JSON.stringify(body),
+    headers: {
+      "Content-type": "application-json",
+    },
+  }).then(resp => resp.json());
+
+  return todoDB;
+};
