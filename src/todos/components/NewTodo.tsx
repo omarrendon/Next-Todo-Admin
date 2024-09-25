@@ -3,7 +3,7 @@
 import { FormEvent, useState } from "react";
 import { IoTrashOutline } from "react-icons/io5";
 import { useRouter } from "next/navigation";
-import { crateTodo, deleteTodo } from "../helpers/todos";
+import { addTodo, deleteTodo } from "../actions/todo-actions";
 
 export const NewTodo = () => {
   const router = useRouter();
@@ -14,11 +14,9 @@ export const NewTodo = () => {
 
     if (description.trim().length === 0) return;
 
-    const responseDB = await crateTodo(description);
-
+    await addTodo(description);
     setDescription("");
     router.refresh();
-    return responseDB;
   };
 
   const deleteCompleted = async () => {
