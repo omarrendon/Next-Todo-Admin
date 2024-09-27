@@ -8,6 +8,7 @@ import {
   IoCheckboxOutline,
   IoCodeWorkingOutline,
   IoListOutline,
+  IoStorefrontOutline,
 } from "react-icons/io5";
 
 const menuItems = [
@@ -30,6 +31,11 @@ const menuItems = [
     icon: <IoCodeWorkingOutline />,
     title: "Cookies",
     path: "/dashboard/cookies",
+  },
+  {
+    icon: <IoStorefrontOutline />,
+    title: "Products",
+    path: "/dashboard/products",
   },
 ];
 
