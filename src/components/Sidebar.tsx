@@ -8,6 +8,7 @@ import {
   IoCheckboxOutline,
   IoCodeWorkingOutline,
   IoListOutline,
+  IoShareSocialSharp,
   IoStorefrontOutline,
 } from "react-icons/io5";
 import { getServerSession } from "next-auth";
@@ -38,6 +39,11 @@ const menuItems = [
     icon: <IoStorefrontOutline />,
     title: "Products",
     path: "/dashboard/products",
+  },
+  {
+    icon: <IoShareSocialSharp />,
+    title: "Profile",
+    path: "/dashboard/profile",
   },
 ];
 
