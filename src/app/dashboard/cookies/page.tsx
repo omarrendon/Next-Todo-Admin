@@ -14,7 +14,7 @@ export default function CookkiesPage() {
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
       <div className="flex flex-col">
         <span className="tet-3xl">Tabs</span>
-        <TabBar currentTab={+cookieTab} />
+        <TabBar currentTab={+cookieTab} tabOptions={[1, 2, 3, 4]} />
       </div>
     </div>
   );
