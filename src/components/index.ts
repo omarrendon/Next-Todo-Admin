@@ -3,3 +3,4 @@ export * from "./WidgetItem";
 export * from "./TopMenu";
 export * from "./SidebarItem";
 export * from "./TabBar";
+export * from "./LogoutButton";

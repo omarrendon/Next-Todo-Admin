@@ -9,7 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@prisma/client": "^5.19.1",
+    "@auth/prisma-adapter": "^2.5.3",
+    "@prisma/client": "^5.20.0",
     "cookies-next": "^4.2.1",
     "next": "14.2.6",
     "next-auth": "^4.24.8",

@@ -4,7 +4,6 @@ import React from "react";
 
 export default function Profilepage() {
   const { data: session } = useSession();
-  console.log({ session });
 
   return (
     <div>
