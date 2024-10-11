@@ -1,4 +1,5 @@
 import prisma from "@/app/lib/prisma";
+import { getUserServerSession } from "@/auth/actions/auth-actions";
 import { NextResponse, NextRequest } from "next/server";
 import * as yup from "yup";
 
@@ -30,6 +31,12 @@ const putSchema = yup.object({
 
 export async function PUT(request: Request, { params }: Segments) {
   const { id } = params;
+
+  const user = await getUserServerSession();
+
+  if (!user) {
+    return NextResponse.json({ messsage: "No authorized" }, { status: 401 });
+  }
 
   const todo = await prisma.todo.findFirst({ where: { id } });
 

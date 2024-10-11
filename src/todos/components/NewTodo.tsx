@@ -4,6 +4,7 @@ import { FormEvent, useState } from "react";
 import { IoTrashOutline } from "react-icons/io5";
 import { useRouter } from "next/navigation";
 import { addTodo, deleteTodo } from "../actions/todo-actions";
+import { crateTodo } from "../helpers/todos";
 
 export const NewTodo = () => {
   const router = useRouter();
@@ -14,7 +15,8 @@ export const NewTodo = () => {
 
     if (description.trim().length === 0) return;
 
-    await addTodo(description);
+    // await addTodo(description);
+    await crateTodo(description);
     setDescription("");
     router.refresh();
   };
