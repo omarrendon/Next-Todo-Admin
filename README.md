@@ -1,3 +1,13 @@
+# Next JS Admin Todos
+
+Es una aplicación creada con Next JS (v14), en donde se implementan las nuevas funcionalidades del framework, se implementan los siguientes features:
+`Server Components`
+`Server Actions`
+`Next Authentication`
+`Cookies en el servidor`
+`use client`
+`use server`
+
 # Development
 
 Pasos para levantar la app en desarrollo
