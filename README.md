@@ -21,6 +21,11 @@ Pasos para levantar la app en desarrollo
 
 7.- Seed para crear [la base de datos local](localhost:3000/api/seed)
 
+## NOTA: Usuario por defecto
+
+**user:** test1@google.com
+**password:** 123456
+
 - Prisma commads
 
 `npx prisma init`

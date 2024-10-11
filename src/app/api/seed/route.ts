@@ -1,16 +1,25 @@
-import prisma from "@/app/lib/prisma";
 import { NextResponse, NextRequest } from "next/server";
+import prisma from "@/app/lib/prisma";
+import bcryptjs from "bcryptjs";
 
 export async function GET(request: Request) {
   await prisma.todo.deleteMany();
+  await prisma.user.deleteMany();
 
-  await prisma.todo.createMany({
-    data: [
-      { description: "School task", complete: true },
-      { description: "Home task" },
-      { description: "Work task" },
-      { description: "Market task" },
-    ],
+  const user = await prisma.user.create({
+    data: {
+      email: "test1@google.com",
+      password: bcryptjs.hashSync("123456"),
+      roles: ["admin", "client", "super-admin"],
+      todos: {
+        create: [
+          { description: "School task", complete: true },
+          { description: "Home task" },
+          { description: "Work task" },
+          { description: "Market task" },
+        ],
+      },
+    },
   });
 
   return NextResponse.json({
